@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>settings page</title>
+    <meta charset='UTF-8' />
+    <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scaleable=no' name='viewport' />
+  </head>
+  <body>
+    <div data-role='page' id='settings'>
+      <div data-role='header' data-theme='c'>
+        <div class='header-title'>
+          <img src='images/settings.png' style='float: left; margin-right: 6px;' />
+          <h3 style='margin-top: 0px; padding-top: 5px'>
+            Settings
+          </h3>
+        </div>
+        <a class='back ui-btn-right' data-direction='reverse' data-mini='false' href='index.html'>
+          Home
+        </a>
+      </div>
+      <div data-role='content'>
+        <div id='debug' style='text-align: right;'>
+          <div data-role='controlgroup' data-type='horizontal'>
+            <a data-inline='data-inline' data-mini='data-mini' data-role='button' href='settings.html' id='defined_test1'>
+              Test 1
+            </a>
+            <a data-inline='data-inline' data-mini='data-mini' data-role='button' href='settings.html' id='defined_test2'>
+              Test 2
+            </a>
+          </div>
+          <script type='text/javascript'>
+            //<![CDATA[
+              $('#defined_test1').bind('click', function(e) {
+                window.should_be_defined();
+              });
+              $('#defined_test2').bind('click', function(e) {
+                window.may_be_defined();
+              });
+            //]]>
+          </script>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
