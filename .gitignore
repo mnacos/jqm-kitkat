@@ -1,3 +1,6 @@
+local_config.json
 *.swp
 .template/
 development/
+release/
+.lib/
